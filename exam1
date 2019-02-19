@@ -1,0 +1,86 @@
+// *****************************************************************************
+// *                                   Exam1                                   *
+// *****************************************************************************
+// *                                                                           *
+// *  Programmer   : Brenan Javier                                             *
+// *  Chapter      : CS3                                                       *
+// *  Assignment   : Exam                                                      *
+// *  Class Name   : Exam1                                                     *
+// *  Date Created : 2/18/2019                                                 *
+// *  Description  : This class calculates the Total number of questions       *
+// *                 answered and the Percentage correct.                      *
+// *                                                                           *
+// *****************************************************************************
+
+// Use System Namespace
+using System;
+
+// Begin Exam1 Class
+class Exam1
+{
+
+    // *************************************************************************
+    // *  Method       : Main                                                  *
+    // *  Description  : The operator is prompted to enter the number of       *
+    // *                 Correct and Incorrect answers from they keyboard. The *
+    // *                 program will then display the Total and Percentage    *
+    // *                 correct.                                              *
+    // *************************************************************************
+
+    // Begin Main ()
+    static void Main()
+    {
+
+        // Define Variables: Correct, Incorrect, Total, Percentage
+        int correctInteger, incorrectInteger, totalInteger;
+        decimal percentageDecimal;
+
+        // Display Title
+        Console.WriteLine("Calculate Quiz Total and Percentage");
+
+        // Display Blank Line
+        Console.WriteLine();
+
+        // Display Correct Prompt
+        Console.Write("Number Of Correct Answers    : ");
+
+        // Input Correct
+        correctInteger = int.Parse(Console.ReadLine());
+
+        // Display Incorrect Prompt
+        Console.Write("Number of Incorrect Answers  : ");
+
+        // Input Incorrect
+        incorrectInteger = int.Parse(Console.ReadLine());
+
+        // Calculate Total = Correct + Incorrect
+        totalInteger = correctInteger + incorrectInteger;
+
+        // Calculate Percentage = Total / 35
+        percentageDecimal = (decimal)correctInteger / totalInteger;
+
+        // Display Blank Line
+        Console.WriteLine();
+
+        // Display Total
+        Console.WriteLine("You answered a Total of " + totalInteger + " questions");
+
+        // Display Percentage
+        Console.WriteLine("Your Percentage Correct is " +
+                          percentageDecimal.ToString("P1"));
+
+        // Display Blank Line
+        Console.WriteLine();
+
+        // Display Press any key Prompt
+        Console.Write("Press any key to continue . . .");
+
+        // Input Press Any Key
+        Console.ReadKey();
+
+
+    }// End Main
+
+
+}// End Exam1 Class
+
